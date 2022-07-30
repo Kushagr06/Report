@@ -29,8 +29,9 @@ def hello_world():
   if request.method=='POST':
     key=request.form['id']
     print(key)
-    # info= getinfo(key)
-  return render_template('index.html')
+    info= getinfo(key)
+    print(info)
+  return render_template('index.html',info)
 
 
 if __name__ == '__main__':
